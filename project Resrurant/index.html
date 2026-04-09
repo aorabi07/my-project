@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlavorHaven - Ultimate Food Portal</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div id="authPage" class="auth-landing">
+    <div class="auth-container">
+        <div class="logo-large"><i class="fas fa-utensils"></i> FlavorHaven</div>
+        <div class="auth-card">
+            <h2 id="authTitle">Login to Your Account</h2>
+            <div id="loginFields">
+                <input type="email" id="loginEmail" placeholder="Email Address">
+                <input type="password" id="loginPass" placeholder="Password">
+                <button id="loginSubmit" class="main-auth-btn">Login Now</button>
+            </div>
+            <div id="registerFields" style="display:none;">
+                <input type="text" id="regName" placeholder="Full Name">
+                <input type="email" id="regEmail" placeholder="Email Address">
+                <input type="password" id="regPass" placeholder="Create Password">
+                <button id="regSubmit" class="main-auth-btn">Create Account</button>
+            </div>
+            <p class="toggle-text"><span id="switchAuth">Don't have an account? Register here</span></p>
+        </div>
+    </div>
+</div>
+
+<div id="mainContent" style="display: none;">
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">FlavorHaven</div>
+            <ul class="nav-menu">
+                <li><a href="#" id="logoutBtn" class="logout-link">Logout</a></li>
+            </ul>
+            <div class="cart-icon" id="cartIconBtn">
+                <i class="fas fa-shopping-bag"></i>
+                <span class="cart-count" id="cartCount">0</span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Deliciousness Delivered</h1>
+            <div class="advanced-search">
+                <input type="text" placeholder="Search for food or dessert..." id="dishSearch">
+                <button class="search-btn">Search</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="container" style="padding: 30px 0; text-align: center;">
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="Chillox">Chillox</button>
+            <button class="filter-btn" data-filter="KFC">KFC</button>
+            <button class="filter-btn" data-filter="Takeout">Takeout</button>
+            <button class="filter-btn" data-filter="PizzaHut">Pizza Hut</button>
+            <button class="filter-btn" data-filter="Sultans">Sultan's Dine</button>
+            <button class="filter-btn" data-filter="Dessert">Desserts</button>
+            <button class="filter-btn" data-filter="Drinks">Drinks</button>
+        </div>
+    </section>
+
+    <section class="container" style="padding-bottom: 60px;">
+        <div class="properties-grid" id="foodGrid">
+            
+            <div class="dish-card" data-restaurant="Chillox">
+                <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400" alt="Burger">
+                <h3>Beef Classic</h3>
+                <p>Restaurant: <b>Chillox</b></p>
+                <button class="add-to-cart-btn" data-name="Chillox Beef" data-price="9.50">Add to Cart</button>
+            </div>
+
+            <div class="dish-card" data-restaurant="KFC">
+                <img src="https://images.unsplash.com/photo-1513639776629-7b61b0ac49cb?w=400" alt="Chicken">
+                <h3>Hot & Spicy Chicken</h3>
+                <p>Restaurant: <b>KFC</b></p>
+                <button class="add-to-cart-btn" data-name="KFC Chicken" data-price="12.00">Add to Cart</button>
+            </div>
+
+            <div class="dish-card" data-restaurant="Sultans">
+                <img src="https://images.unsplash.com/photo-1589302168068-964664d93dc0?w=400" alt="Kacchi">
+                <h3>Mutton Kacchi</h3>
+                <p>Restaurant: <b>Sultan's Dine</b></p>
+                <button class="add-to-cart-btn" data-name="Mutton Kacchi" data-price="15.00">Add to Cart</button>
+            </div>
+
+            <div class="dish-card" data-restaurant="Takeout">
+                <img src="https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?w=400" alt="Burger">
+                <h3>Cheese Blast Burger</h3>
+                <p>Restaurant: <b>Takeout</b></p>
+                <button class="add-to-cart-btn" data-name="Cheese Blast" data-price="13.50">Add to Cart</button>
+            </div>
+
+            <div class="dish-card" data-restaurant="Dessert">
+                <img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=400" alt="Cupcake">
+                <h3>Red Velvet Cupcake</h3>
+                <p>Category: <b>Dessert</b></p>
+                <button class="add-to-cart-btn" data-name="Red Velvet" data-price="4.50">Add to Cart</button>
+            </div>
+
+            <div class="dish-card" data-restaurant="Drinks">
+                <img src="https://images.unsplash.com/photo-1544145945-f904253d0c71?w=400" alt="Coffee">
+                <h3>Iced Caramel Latte</h3>
+                <p>Category: <b>Drinks</b></p>
+                <button class="add-to-cart-btn" data-name="Caramel Latte" data-price="6.00">Add to Cart</button>
+            </div>
+
+            <div class="dish-card" data-restaurant="PizzaHut">
+                <img src="https://images.unsplash.com/photo-1513104890138-7c749659a591?w=400" alt="Pizza">
+                <h3>Pepperoni Feast</h3>
+                <p>Restaurant: <b>Pizza Hut</b></p>
+                <button class="add-to-cart-btn" data-name="Pepperoni Pizza" data-price="18.00">Add to Cart</button>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="container" style="padding-bottom: 60px;">
+        <div class="booking-card">
+            <h2>📅 Reserve a Table</h2>
+            <div class="booking-form">
+                <input type="text" id="resName" placeholder="Enter Restaurant Name">
+                <input type="date" id="resDate">
+                <input type="time" id="resTime">
+                <button id="bookTableBtn" class="confirm-booking-btn">Confirm Reservation</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header"><h3>Your Order 🛒</h3><i class="fas fa-times" id="closeCart"></i></div>
+    <div class="cart-items" id="cartItemsList"></div>
+    <div class="cart-total">Total: $<span id="cartTotalAmount">0.00</span></div>
+    <button class="checkout-btn" id="checkoutBtn">Proceed to Checkout</button>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-database-compat.js"></script>
+
+<script src="main.js"></script>
+</body>
+</html>
